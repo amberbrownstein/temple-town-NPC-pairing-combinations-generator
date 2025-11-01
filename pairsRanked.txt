@@ -1,0 +1,498 @@
+Combo 1:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Nadia,Casey
+
+Jonah: Juniper,Calliope
+
+Beau: Calliope,Daisy
+
+Casey: Tristan,Juniper
+
+Nadia: Jay,Tristan
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Beau
+
+Calliope: Jonah,Beau
+
+Juniper: Jonah,Casey
+
+
+Combo 2:
+
+Jay: Thea,Calliope
+
+Flynn: Daisy,Thea
+
+Tristan: Nadia,Casey
+
+Jonah: Juniper,Nadia
+
+Beau: Calliope,Daisy
+
+Casey: Tristan,Juniper
+
+Nadia: Tristan,Jonah
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Beau
+
+Calliope: Jay,Beau
+
+Juniper: Jonah,Casey
+
+
+Combo 3:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Nadia,Casey
+
+Jonah: Juniper,Calliope
+
+Beau: Calliope,Juniper
+
+Casey: Tristan,Daisy
+
+Nadia: Jay,Tristan
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Casey
+
+Calliope: Jonah,Beau
+
+Juniper: Jonah,Beau
+
+
+Combo 4:
+
+Jay: Thea,Calliope
+
+Flynn: Daisy,Thea
+
+Tristan: Nadia,Casey
+
+Jonah: Juniper,Nadia
+
+Beau: Calliope,Juniper
+
+Casey: Tristan,Daisy
+
+Nadia: Tristan,Jonah
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Casey
+
+Calliope: Jay,Beau
+
+Juniper: Jonah,Beau
+
+
+Combo 5:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Juniper,Casey
+
+Jonah: Nadia,Calliope
+
+Beau: Calliope,Daisy
+
+Casey: Tristan,Juniper
+
+Nadia: Jay,Jonah
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Beau
+
+Calliope: Jonah,Beau
+
+Juniper: Tristan,Casey
+
+
+Combo 6:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Casey,Calliope
+
+Jonah: Juniper,Nadia
+
+Beau: Calliope,Daisy
+
+Casey: Tristan,Juniper
+
+Nadia: Jay,Jonah
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Beau
+
+Calliope: Tristan,Beau
+
+Juniper: Jonah,Casey
+
+
+Combo 7:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Juniper,Casey
+
+Jonah: Nadia,Calliope
+
+Beau: Calliope,Juniper
+
+Casey: Tristan,Daisy
+
+Nadia: Jay,Jonah
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Casey
+
+Calliope: Jonah,Beau
+
+Juniper: Tristan,Beau
+
+
+Combo 8:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Daisy,Casey
+
+Jonah: Nadia,Calliope
+
+Beau: Calliope,Juniper
+
+Casey: Tristan,Juniper
+
+Nadia: Jay,Jonah
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Tristan
+
+Calliope: Jonah,Beau
+
+Juniper: Beau,Casey
+
+
+Combo 9:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Casey,Calliope
+
+Jonah: Juniper,Nadia
+
+Beau: Calliope,Juniper
+
+Casey: Tristan,Daisy
+
+Nadia: Jay,Jonah
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Casey
+
+Calliope: Tristan,Beau
+
+Juniper: Jonah,Beau
+
+
+Combo 10:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Nadia,Juniper
+
+Jonah: Juniper,Calliope
+
+Beau: Calliope,Casey
+
+Casey: Beau,Daisy
+
+Nadia: Jay,Tristan
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Casey
+
+Calliope: Jonah,Beau
+
+Juniper: Tristan,Jonah
+
+
+Combo 11:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Nadia,Daisy
+
+Jonah: Juniper,Calliope
+
+Beau: Calliope,Casey
+
+Casey: Beau,Juniper
+
+Nadia: Jay,Tristan
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Tristan
+
+Calliope: Jonah,Beau
+
+Juniper: Jonah,Casey
+
+
+Combo 12:
+
+Jay: Thea,Calliope
+
+Flynn: Daisy,Thea
+
+Tristan: Nadia,Juniper
+
+Jonah: Juniper,Nadia
+
+Beau: Calliope,Casey
+
+Casey: Beau,Daisy
+
+Nadia: Tristan,Jonah
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Casey
+
+Calliope: Jay,Beau
+
+Juniper: Tristan,Jonah
+
+
+Combo 13:
+
+Jay: Thea,Calliope
+
+Flynn: Daisy,Thea
+
+Tristan: Nadia,Daisy
+
+Jonah: Juniper,Nadia
+
+Beau: Calliope,Casey
+
+Casey: Beau,Juniper
+
+Nadia: Tristan,Jonah
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Tristan
+
+Calliope: Jay,Beau
+
+Juniper: Jonah,Casey
+
+
+Combo 14:
+
+Jay: Thea,Calliope
+
+Flynn: Daisy,Thea
+
+Tristan: Nadia,Casey
+
+Jonah: Nadia,Calliope
+
+Beau: Daisy,Juniper
+
+Casey: Tristan,Juniper
+
+Nadia: Tristan,Jonah
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Beau
+
+Calliope: Jay,Jonah
+
+Juniper: Beau,Casey
+
+
+Combo 15:
+
+Jay: Thea,Calliope
+
+Flynn: Daisy,Nadia
+
+Tristan: Nadia,Casey
+
+Jonah: Juniper,Thea
+
+Beau: Calliope,Daisy
+
+Casey: Tristan,Juniper
+
+Nadia: Flynn,Tristan
+
+Thea: Jay,Jonah
+
+Daisy: Flynn,Beau
+
+Calliope: Jay,Beau
+
+Juniper: Jonah,Casey
+
+
+Combo 16:
+
+Jay: Nadia,Calliope
+
+Flynn: Daisy,Thea
+
+Tristan: Nadia,Casey
+
+Jonah: Juniper,Thea
+
+Beau: Calliope,Daisy
+
+Casey: Tristan,Juniper
+
+Nadia: Jay,Tristan
+
+Thea: Flynn,Jonah
+
+Daisy: Flynn,Beau
+
+Calliope: Jay,Beau
+
+Juniper: Jonah,Casey
+
+
+Combo 17:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Juniper,Casey
+
+Jonah: Juniper,Calliope
+
+Beau: Calliope,Nadia
+
+Casey: Tristan,Daisy
+
+Nadia: Jay,Beau
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Casey
+
+Calliope: Jonah,Beau
+
+Juniper: Tristan,Jonah
+
+
+Combo 18:
+
+Jay: Thea,Nadia
+
+Flynn: Daisy,Thea
+
+Tristan: Daisy,Casey
+
+Jonah: Juniper,Calliope
+
+Beau: Calliope,Nadia
+
+Casey: Tristan,Juniper
+
+Nadia: Jay,Beau
+
+Thea: Jay,Flynn
+
+Daisy: Flynn,Tristan
+
+Calliope: Jonah,Beau
+
+Juniper: Jonah,Casey
+
+
+Combo 19:
+
+Jay: Thea,Nadia
+
+Flynn: Thea,Nadia
+
+Tristan: Juniper,Casey
+
+Jonah: Juniper,Calliope
+
+Beau: Calliope,Daisy
+
+Casey: Tristan,Daisy
+
+Nadia: Jay,Flynn
+
+Thea: Jay,Flynn
+
+Daisy: Beau,Casey
+
+Calliope: Jonah,Beau
+
+Juniper: Tristan,Jonah
+
+
+Combo 20:
+
+Jay: Thea,Nadia
+
+Flynn: Thea,Nadia
+
+Tristan: Daisy,Casey
+
+Jonah: Juniper,Calliope
+
+Beau: Calliope,Daisy
+
+Casey: Tristan,Juniper
+
+Nadia: Jay,Flynn
+
+Thea: Jay,Flynn
+
+Daisy: Tristan,Beau
+
+Calliope: Jonah,Beau
+
+Juniper: Jonah,Casey
