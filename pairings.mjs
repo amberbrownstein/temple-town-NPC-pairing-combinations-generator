@@ -80,9 +80,10 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
                         // by adding up priority for each assigned pairing per respective character
                         for(const character of charactersPairedCopy)
                             totalScore += character.priority
+                    
+                        // TODO: add a lock here to prevent race condition
 
                         // add valid pairings combination to array of pairings combinations
-                        // TODO: add a lock here to prevent race condition
                         validPairings.push({'score': totalScore, 'characters': charactersPairedCopy});
                 }
             }
