@@ -30,6 +30,9 @@ const characters = [
     new Character('Juniper', ['Jonah', 'Beau', 'Tristan', 'Casey']),
 ]
 
+// determine all valid pairing combinations
+// add rivals to rivals array for each character from copy of charactersPaired array
+// add copy of charactersPaired array of characters with populated rivals array to validPairings array
 function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
     // helper method to get Character by name from array of Characters
     const getRival = (charPairings, name) => 
