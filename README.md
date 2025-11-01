@@ -4,6 +4,6 @@ Like many farming games, this one will allow the player to date and marry certai
 
 Once the player marries their partner of choice, the remaining romanceable characters will start developing relationships with each other more deeply and eventually get married as well. As a result, each romanceable character has two assigned rivals so that each NPC will still be able to get married regardless of which one the player chooses to marry.
 
-While additional pairings may be supported in the future as downloadable content, this algorithm helped me determine the most ideal rival assignments to set as the default for the initial launch, based on which rivals I like best for each NPC.
+While additional pairings may be supported in the future as downloadable content, this algorithm helped me determine the most ideal rival assignments to set as the default for the initial launch, based on which rivals I like best for each NPC and the limitation of each character needing to be assigned exactly two rivals.
 
 However, this is subject to change, as I may decide in the future that my personal ranking of pairings differs from my initial preferences.
