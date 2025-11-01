@@ -1,4 +1,4 @@
-Combo 1:
+Combo 1, Ranking 18: 
 
 Jay: Thea,Nadia
 
@@ -23,7 +23,7 @@ Calliope: Jonah,Beau
 Juniper: Jonah,Casey
 
 
-Combo 2:
+Combo 2, Ranking 18:
 
 Jay: Thea,Calliope
 
@@ -48,7 +48,7 @@ Calliope: Jay,Beau
 Juniper: Jonah,Casey
 
 
-Combo 3:
+Combo 3, Ranking 20:
 
 Jay: Thea,Nadia
 
@@ -73,7 +73,7 @@ Calliope: Jonah,Beau
 Juniper: Jonah,Beau
 
 
-Combo 4:
+Combo 4, Ranking 20:
 
 Jay: Thea,Calliope
 
@@ -98,7 +98,7 @@ Calliope: Jay,Beau
 Juniper: Jonah,Beau
 
 
-Combo 5:
+Combo 5, Ranking 21:
 
 Jay: Thea,Nadia
 
@@ -123,7 +123,7 @@ Calliope: Jonah,Beau
 Juniper: Tristan,Casey
 
 
-Combo 6:
+Combo 6, Ranking 21:
 
 Jay: Thea,Nadia
 
@@ -148,7 +148,7 @@ Calliope: Tristan,Beau
 Juniper: Jonah,Casey
 
 
-Combo 7:
+Combo 7, Ranking 23:
 
 Jay: Thea,Nadia
 
@@ -173,7 +173,7 @@ Calliope: Jonah,Beau
 Juniper: Tristan,Beau
 
 
-Combo 8:
+Combo 8, Ranking 23:
 
 Jay: Thea,Nadia
 
@@ -198,7 +198,7 @@ Calliope: Jonah,Beau
 Juniper: Beau,Casey
 
 
-Combo 9:
+Combo 9, Ranking 23:
 
 Jay: Thea,Nadia
 
@@ -223,7 +223,7 @@ Calliope: Tristan,Beau
 Juniper: Jonah,Beau
 
 
-Combo 10:
+Combo 10, Ranking 24:
 
 Jay: Thea,Nadia
 
@@ -248,7 +248,7 @@ Calliope: Jonah,Beau
 Juniper: Tristan,Jonah
 
 
-Combo 11:
+Combo 11, Ranking 24:
 
 Jay: Thea,Nadia
 
@@ -273,7 +273,7 @@ Calliope: Jonah,Beau
 Juniper: Jonah,Casey
 
 
-Combo 12:
+Combo 12, Ranking 24:
 
 Jay: Thea,Calliope
 
@@ -298,7 +298,7 @@ Calliope: Jay,Beau
 Juniper: Tristan,Jonah
 
 
-Combo 13:
+Combo 13, Ranking 24:
 
 Jay: Thea,Calliope
 
@@ -323,7 +323,7 @@ Calliope: Jay,Beau
 Juniper: Jonah,Casey
 
 
-Combo 14:
+Combo 14, Ranking 24:
 
 Jay: Thea,Calliope
 
@@ -348,7 +348,7 @@ Calliope: Jay,Jonah
 Juniper: Beau,Casey
 
 
-Combo 15:
+Combo 15, Ranking 25:
 
 Jay: Thea,Calliope
 
@@ -373,7 +373,7 @@ Calliope: Jay,Beau
 Juniper: Jonah,Casey
 
 
-Combo 16:
+Combo 16, Ranking 25:
 
 Jay: Nadia,Calliope
 
@@ -398,7 +398,7 @@ Calliope: Jay,Beau
 Juniper: Jonah,Casey
 
 
-Combo 17:
+Combo 17, Ranking 26:
 
 Jay: Thea,Nadia
 
@@ -423,7 +423,7 @@ Calliope: Jonah,Beau
 Juniper: Tristan,Jonah
 
 
-Combo 18:
+Combo 18, Ranking 26:
 
 Jay: Thea,Nadia
 
@@ -448,7 +448,7 @@ Calliope: Jonah,Beau
 Juniper: Jonah,Casey
 
 
-Combo 19:
+Combo 19, Ranking 26:
 
 Jay: Thea,Nadia
 
@@ -473,7 +473,7 @@ Calliope: Jonah,Beau
 Juniper: Tristan,Jonah
 
 
-Combo 20:
+Combo 20, Ranking 26:
 
 Jay: Thea,Nadia
 
