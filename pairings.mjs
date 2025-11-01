@@ -7,11 +7,6 @@ class Character{
     }
 }
 
-// TODO: update characters data structure from array
-// so that priority can be a property of characters
-// instead of each individual character having their own priority
-// that needs to be summed up at the end
-
 // TODO: read and assign these values from a JSON file
 
 // initialize all characters, ordering rivals in pairings array
@@ -74,8 +69,13 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
                         currRivalCopy.rivals.push(currCharName);
                         currRivalCopy.priority += currRivalCopy.pairings.indexOf(currCharName);
 
-                        let totalScore = 0;
+                        let totalScore = 0;    
 
+                        // TODO: update characters data structure from array
+                        // so that priority can be a property of characters
+                        // instead of each individual character having their own priority
+                        // that needs to be summed up at the end
+                    
                         // sum up total score of current pairings combination
                         // by adding up priority for each assigned pairing per respective character
                         for(const character of charactersPairedCopy)
