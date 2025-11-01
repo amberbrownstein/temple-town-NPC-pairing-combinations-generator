@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 class Character{
     constructor(name, pairings){
         this.name = name;
@@ -153,14 +155,19 @@ findPairingCombos(characters, validPairings, 0)
 // a perfect score would be 15
 validPairings.sort((a, b) => a.score - b.score);
 
+let data = '';
+
 // print the top 20 pairing combinations
 for(let i = 0; i < validPairings.length && i < 20; ++i){
     const pairing = validPairings[i];
-    console.log(`
+    data += `
 Combo ${i + 1}, Ranking ${pairing.score}: 
-`);
+`;
     
     for(let character of pairing.characters)
-        console.log(`${character.name}: ${character.rivals}
-`);
+        data += `${character.name}: ${character.rivals.join(', ')}
+`;
     }
+
+    fs.writeFile('pairsRanked.txt', data, (err) => { if (err) { console.error('An error occurred:', err); return; }
+        console.log('Data has been written to pairsRanked.txt'); });
