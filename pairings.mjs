@@ -156,12 +156,20 @@ findPairingCombos(characters, validPairings, 0)
 validPairings.sort((a, b) => a.score - b.score);
 
 let data = '';
+let lowestRanking = -1;
 
 // print the top 20 pairing combinations
 for(let i = 0; i < validPairings.length && i < 20; ++i){
     const pairing = validPairings[i];
+    let ranking = pairing.score;
+
+    if(i == 0)
+        lowestRanking += ranking;
+    
+    ranking -= lowestRanking;
+
     data += `
-Combo ${i + 1}, Ranking ${pairing.score}: 
+Combo ${i + 1}, Ranking ${ranking}: 
 `;
     
     for(let character of pairing.characters)
