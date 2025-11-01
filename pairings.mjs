@@ -12,6 +12,8 @@ class Character{
 // instead of each individual character having their own priority
 // that needs to be summed up at the end
 
+// TODO: read and assign these values from a JSON file
+
 // initialize all characters, ordering rivals in pairings array
 // by most to least wanted pairing for that character
 const characters = [
