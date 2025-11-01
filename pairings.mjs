@@ -63,7 +63,7 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
                         const currCharName = currCharCopy.name;
 
                         // add current rival to Casey's assigned rivals, and vice versa
-                        // and update total score to reflect rankning of the current pairing
+                        // and update total score to reflect ranking of the current pairing
                         currCharCopy.rivals.push(currRivalName);
                         currCharCopy.priority += i;
                         currRivalCopy.rivals.push(currCharName);
@@ -72,7 +72,7 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
                         let totalScore = 0;
 
                         // sum up total score of current pairings combination
-                        // by adding up priority for each respective pairing per character
+                        // by adding up priority for each assigned pairing per respective character
                         for(const character of charactersPairedCopy)
                             totalScore += character.priority
 
@@ -88,7 +88,7 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
         const currCharPairings = currChar.pairings;
 
         // find first rival to assign to current character
-        // do not need to check for rivals already assigned
+        // do not need to check if rivals have already been assigned
         // because this code block only applies to male characters
         // who cannot be assigned to each other
         // for the initial iteration of the game
