@@ -14,30 +14,32 @@ class Character{
 // initialize all characters, ordering rivals in pairings array
 // by most to least wanted pairing for that character
 const characters = [
-    new Character('Jay', ['Thea', 'Nadia', 'Calliope']),
+    new Character('Jay', ['Thea', 'Calliope', 'Nadia']),
     new Character('Flynn', ['Daisy', 'Thea', 'Nadia']),
-    new Character('Tristan', ['Nadia', 'Juniper', 'Daisy', 'Casey', 'Calliope']),
-    new Character('Jonah', ['Juniper', 'Nadia', 'Calliope', 'Thea']),
+    new Character('Tristan', ['Nadia', 'Casey', 'Juniper', 'Daisy', 'Calliope']),
+    new Character('Jonah', ['Nadia', 'Juniper', 'Calliope', 'Thea']),
     new Character('Beau', ['Calliope', 'Daisy', 'Juniper', 'Nadia', 'Casey']),
-    new Character('Casey', ['Tristan', 'Juniper', 'Daisy', 'Beau']),
+    new Character('Casey', ['Juniper', 'Tristan', 'Daisy', 'Beau']),
     new Character('Nadia', ['Jonah', 'Tristan', 'Jay', 'Flynn', 'Beau']),
     new Character('Thea', ['Jay', 'Flynn', 'Jonah']),
-    new Character('Daisy', ['Flynn', 'Beau', 'Tristan', 'Casey']),
-    new Character('Calliope', ['Beau', 'Jonah', 'Tristan', 'Jay']),
-    new Character('Juniper', ['Jonah', 'Beau', 'Tristan', 'Casey']),
+    new Character('Daisy', ['Flynn', 'Beau', 'Casey', 'Tristan']),
+    new Character('Calliope', ['Beau', 'Jay', 'Jonah', 'Tristan']),
+    new Character('Juniper', ['Casey', 'Jonah', 'Tristan', 'Beau']),
 ]
 
 // determine all valid pairing combinations
-// add rivals to rivals array for each character from copy of charactersPaired array
-// add copy of charactersPaired array of characters with populated rivals array to validPairings array
-function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
+// add rivals to rivals array for each character from copy of charactersArray array
+// add copy of charactersArray array of characters with populated rivals array to validPairings array
+function findPairingCombos(charactersArray, validPairings, currCharacterIndex){
     // helper method to get Character by name from array of Characters
     const getRival = (charPairings, name) => 
-        charPairings.find((character) => character.name == name); 
+        charPairings.find((character) => character.name == name);
+
+    const indexOfCasey = Math.ceil(charactersArray.length / 2) - 1;
     
     // exit condition - all male characters have been covered, and algorithm is now on Casey
-    if(currCharacterIndex >= Math.ceil(charactersPaired.length / 2) - 1){
-        const currChar = charactersPaired[currCharacterIndex];
+    if(currCharacterIndex >= indexOfCasey){
+        const currChar = charactersArray[currCharacterIndex];
         
         // if Casey does not have exactly 1 male rival by this point,
         // current pairings combination will be invalid
@@ -54,14 +56,14 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
 
                 // if given rival does not have exactly 1 assigned rival of their own by this point
                 // current pairings combination will be invalid
-                if(charactersPaired.findIndex((character) => character.name == currRivalName) > currCharacterIndex &&
-                    getRival(charactersPaired, currRivalName).rivals.length == 1){
+                if(charactersArray.findIndex((character) => character.name == currRivalName) > currCharacterIndex &&
+                    getRival(charactersArray, currRivalName).rivals.length == 1){
 
                         // deep copy characters array so as to not affect other recursive threads  
-                        const charactersPairedCopy = JSON.parse(JSON.stringify(charactersPaired));
+                        const charactersArrayCopy = JSON.parse(JSON.stringify(charactersArray));
 
-                        const currCharCopy = charactersPairedCopy[currCharacterIndex];
-                        const currRivalCopy = getRival(charactersPairedCopy, currRivalName);
+                        const currCharCopy = charactersArrayCopy[currCharacterIndex];
+                        const currRivalCopy = getRival(charactersArrayCopy, currRivalName);
                         const currCharName = currCharCopy.name;
 
                         // add current rival to Casey's assigned rivals, and vice versa
@@ -70,6 +72,17 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
                         currCharCopy.priority += i;
                         currRivalCopy.rivals.push(currCharName);
                         currRivalCopy.priority += currRivalCopy.pairings.indexOf(currCharName);
+                        
+                        // check condition that there is no symmetry between any combinations of characters
+                        // that would cause marrying a specific character to result in an NPC not being able to marry
+
+                        // check for male characters
+                        if(!checkForSymmetry(charactersArrayCopy.slice(0, indexOfCasey)))
+                            return false;
+
+                        // check for female characters
+                        if(!checkForSymmetry(charactersArrayCopy.slice(indexOfCasey + 1, charactersArrayCopy.length)))
+                            return false;
 
                         let totalScore = 0;    
 
@@ -80,19 +93,19 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
                     
                         // sum up total score of current pairings combination
                         // by adding up priority for each assigned pairing per respective character
-                        for(const character of charactersPairedCopy)
+                        for(const character of charactersArrayCopy)
                             totalScore += character.priority
                     
                         // TODO: add a lock here to prevent race condition
 
                         // add valid pairings combination to array of pairings combinations
-                        validPairings.push({'score': totalScore, 'characters': charactersPairedCopy});
+                        validPairings.push({'score': totalScore, 'characters': charactersArrayCopy});
                 }
             }
         }
     }
     else{
-        const currChar = charactersPaired[currCharacterIndex];
+        const currChar = charactersArray[currCharacterIndex];
         const currCharPairings = currChar.pairings;
 
         // find first rival to assign to current character
@@ -106,7 +119,7 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
 
             // if current potential rival already has 2 assigned rivals,
             // skip and move onto next rival
-            if(getRival(charactersPaired, firstRivalName).rivals.length > 1)
+            if(getRival(charactersArray, firstRivalName).rivals.length > 1)
                 continue;
 
             // find second rival to assign to current character
@@ -115,16 +128,16 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
 
                 // if current potential rival already has 2 assigned rivals,
                 // skip and move onto next rival
-                if(getRival(charactersPaired, secondRivalName).rivals.length > 1)
+                if(getRival(charactersArray, secondRivalName).rivals.length > 1)
                     continue;
 
                 // deep copy characters array so as to not affect other recursive threads  
-                const charactersPairedCopy = JSON.parse(JSON.stringify(charactersPaired));
+                const charactersArrayCopy = JSON.parse(JSON.stringify(charactersArray));
 
-                const currCharCopy = charactersPairedCopy[currCharacterIndex];
+                const currCharCopy = charactersArrayCopy[currCharacterIndex];
                 const currCharName = currCharCopy.name;
-                const firstRivalCopy = getRival(charactersPairedCopy, firstRivalName);
-                const secondRivalCopy = getRival(charactersPairedCopy, secondRivalName);
+                const firstRivalCopy = getRival(charactersArrayCopy, firstRivalName);
+                const secondRivalCopy = getRival(charactersArrayCopy, secondRivalName);
                 
                 // set current character's rivals to the current rivals
                 currCharCopy.rivals = [firstRivalName, secondRivalName];
@@ -139,10 +152,46 @@ function findPairingCombos(charactersPaired, validPairings, currCharacterIndex){
                 secondRivalCopy.priority += secondRivalCopy.pairings.indexOf(currCharName);
 
                 // find all combinations of pairings that include the above pairings
-                findPairingCombos(charactersPairedCopy, validPairings, currCharacterIndex + 1);
+                findPairingCombos(charactersArrayCopy, validPairings, currCharacterIndex + 1);
             }
         }
     }
+}
+
+// recursive function to check that there is no marriage candidate
+// for whom marrying would result in any NPC being unable to get married
+function checkForSymmetry(charactersArray) {
+    let validCombo = true;
+
+    function help(curr, remain) {
+        if(!validCombo)
+            return;
+
+        if (remain.length === 0) {
+            if (curr.length > 1) {
+                const uniqueRivals = curr.reduce(
+                    (setOfRivals, character) => {
+                        for(const rival of character.rivals)
+                            setOfRivals.add(rival);
+
+                        return setOfRivals;
+                    },
+                    new Set()
+                );
+
+                if(uniqueRivals.size <= curr.length)
+                    validCombo = false;
+            }
+            return;
+        }
+
+        help([...curr, remain[0]], remain.slice(1));
+
+        help(curr, remain.slice(1));
+    }
+
+    help([], charactersArray);
+    return validCombo;
 }
 
 const validPairings = [];
@@ -155,11 +204,14 @@ findPairingCombos(characters, validPairings, 0)
 // a perfect score would be 15
 validPairings.sort((a, b) => a.score - b.score);
 
+// reduce to top 15 combinations
+validPairings.splice(15);
+
 let data = '';
 let lowestRanking = -1;
 
-// print the top 20 pairing combinations
-for(let i = 0; i < validPairings.length && i < 20; ++i){
+// print generated combos to text file
+for(let i = 0; i < validPairings.length; ++i){
     const pairing = validPairings[i];
     let ranking = pairing.score;
 
