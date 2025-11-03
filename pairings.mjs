@@ -16,16 +16,26 @@ class Character{
 const characters = [
     new Character('Jay', ['Thea', 'Calliope', 'Nadia']),
     new Character('Flynn', ['Daisy', 'Thea', 'Nadia']),
-    new Character('Tristan', ['Nadia', 'Casey', 'Juniper', 'Daisy', 'Calliope']),
+    new Character('Tristan', ['Casey', 'Juniper', 'Nadia', 'Daisy', 'Calliope']),
     new Character('Jonah', ['Nadia', 'Juniper', 'Calliope', 'Thea']),
     new Character('Beau', ['Calliope', 'Daisy', 'Juniper', 'Nadia', 'Casey']),
-    new Character('Casey', ['Juniper', 'Tristan', 'Daisy', 'Beau']),
-    new Character('Nadia', ['Jonah', 'Tristan', 'Jay', 'Flynn', 'Beau']),
+    new Character('Casey', ['Juniper', 'Daisy', 'Tristan', 'Beau']),
+    new Character('Nadia', ['Jonah', 'Beau', 'Tristan', 'Jay', 'Flynn']),
     new Character('Thea', ['Jay', 'Flynn', 'Jonah']),
-    new Character('Daisy', ['Flynn', 'Beau', 'Casey', 'Tristan']),
+    new Character('Daisy', ['Flynn', 'Casey', 'Beau', 'Tristan']),
     new Character('Calliope', ['Beau', 'Jay', 'Jonah', 'Tristan']),
     new Character('Juniper', ['Casey', 'Jonah', 'Tristan', 'Beau']),
 ]
+
+// add must-have pairings
+characters[0].rivals.push('Thea');
+characters[1].rivals.push('Daisy', 'Thea');
+characters[3].rivals.push('Nadia');
+characters[4].rivals.push('Calliope');
+characters[6].rivals.push('Jonah');
+characters[7].rivals.push('Jay', 'Flynn');
+characters[8].rivals.push('Flynn');
+characters[9].rivals.push('Beau');
 
 // determine all valid pairing combinations
 // add rivals to rivals array for each character from copy of charactersArray array
@@ -74,13 +84,13 @@ function findPairingCombos(charactersArray, validPairings, currCharacterIndex){
                         currRivalCopy.priority += currRivalCopy.pairings.indexOf(currCharName);
                         
                         // check condition that there is no symmetry between any combinations of characters
-                        // that would cause marrying a specific character to result in an NPC not being able to marry
+                        // that would cause marrying a specific character to result in any NPC not being able to marry
 
-                        // check for male characters
+                        // check male characters
                         if(!checkForSymmetry(charactersArrayCopy.slice(0, indexOfCasey)))
                             return false;
 
-                        // check for female characters
+                        // check female characters
                         if(!checkForSymmetry(charactersArrayCopy.slice(indexOfCasey + 1, charactersArrayCopy.length)))
                             return false;
 
@@ -109,56 +119,80 @@ function findPairingCombos(charactersArray, validPairings, currCharacterIndex){
         const currCharPairings = currChar.pairings;
 
         // find first rival to assign to current character
-        // do not need to check if rivals have already been assigned
-        // because this code block only applies to male characters
-        // who cannot be assigned to each other
-        // for the initial iteration of the game
         for(let i = 0; i < currCharPairings.length - 1; ++i){
-            const currRivals = [];
-            const firstRivalName = currCharPairings[i];
-
-            // if current potential rival already has 2 assigned rivals,
-            // skip and move onto next rival
-            if(getRival(charactersArray, firstRivalName).rivals.length > 1)
-                continue;
+            let firstRivalName;
+            
+            // assign first rival to current pairing
+            // if first rival is already filled, leave firstRivalName undefined
+            if(currChar.rivals.length === 0){
+                firstRivalName = currCharPairings[i];
+                
+                // if current potential rival already has 2 assigned rivals,
+                // skip and move onto next rival
+                if(getRival(charactersArray, firstRivalName).rivals.length > 1)
+                    continue;
+            }
 
             // find second rival to assign to current character
             for(let j = i + 1; j < currCharPairings.length; ++j){
-                const secondRivalName = currCharPairings[j];
-
-                // if current potential rival already has 2 assigned rivals,
-                // skip and move onto next rival
-                if(getRival(charactersArray, secondRivalName).rivals.length > 1)
-                    continue;
 
                 // deep copy characters array so as to not affect other recursive threads  
                 const charactersArrayCopy = JSON.parse(JSON.stringify(charactersArray));
 
-                const currCharCopy = charactersArrayCopy[currCharacterIndex];
-                const currCharName = currCharCopy.name;
-                const firstRivalCopy = getRival(charactersArrayCopy, firstRivalName);
-                const secondRivalCopy = getRival(charactersArrayCopy, secondRivalName);
-                
-                // set current character's rivals to the current rivals
-                currCharCopy.rivals = [firstRivalName, secondRivalName];
+                // if current character already has 2 rivals assigned,
+                // skip straight to recursing through the next characters
+                if(currChar.rivals.length === 2){
+                    findPairingCombos(charactersArrayCopy, validPairings, currCharacterIndex + 1);
+                    break;
+                }
+                else{
+                    const secondRivalName = currCharPairings[j];
+                        
+                    // if current potential rival already has 2 assigned rivals,
+                    // skip and move onto next rival
+                    if(getRival(charactersArray, secondRivalName).rivals.length > 1)
+                        continue;
 
-                // and vice versa
-                firstRivalCopy.rivals.push(currCharName);
-                secondRivalCopy.rivals.push(currCharName);
+                    const currCharCopy = charactersArrayCopy[currCharacterIndex];
+                    const currCharName = currCharCopy.name;
 
-                // update pairings ranking for each character who just had new rivals assigned
-                currCharCopy.priority = i + j;
-                firstRivalCopy.priority += firstRivalCopy.pairings.indexOf(currCharName);
-                secondRivalCopy.priority += secondRivalCopy.pairings.indexOf(currCharName);
+                    // if first rival hasn't been assigned yet
+                    // set first rival to current first rival from outer loop
+                    if(firstRivalName){
+                        currCharCopy.rivals.push(firstRivalName);
+                        const firstRivalCopy = getRival(charactersArrayCopy, firstRivalName);
 
-                // find all combinations of pairings that include the above pairings
-                findPairingCombos(charactersArrayCopy, validPairings, currCharacterIndex + 1);
+                        // add current character to current rival's rivals
+                        firstRivalCopy.rivals.push(currCharName);
+
+                        // update pairings ranking for both
+                        currCharCopy.priority += i;
+                        firstRivalCopy.priority += firstRivalCopy.pairings.indexOf(currCharName);
+                    }
+
+                    // add current rival to current character's rivals
+                    // and vice versa
+                    currCharCopy.rivals.push(secondRivalName);
+                    const secondRivalCopy = getRival(charactersArrayCopy, secondRivalName);
+                    secondRivalCopy.rivals.push(currCharName);
+
+                    // update pairings ranking for both
+                    currCharCopy.priority += j;
+                    secondRivalCopy.priority += secondRivalCopy.pairings.indexOf(currCharName);
+
+                    // find all combinations of pairings that include the above pairings
+                    findPairingCombos(charactersArrayCopy, validPairings, currCharacterIndex + 1);
+                }
             }
+
+            // no need to continue outer loop if first rival is already assigned
+            if(!firstRivalName)
+                break;
         }
     }
 }
 
-// recursive function to check that there is no marriage candidate
+// function to check that there is no marriage candidate
 // for whom marrying would result in any NPC being unable to get married
 function checkForSymmetry(charactersArray) {
     let validCombo = true;
@@ -179,12 +213,16 @@ function checkForSymmetry(charactersArray) {
                     new Set()
                 );
 
+                // if the number of unique assigned rivals is equal to the number of
+                // characters being compared, then marrying one of those rivals
+                // will cause one character to be unable to get married
                 if(uniqueRivals.size <= curr.length)
                     validCombo = false;
             }
             return;
         }
 
+        // recursively check each subset of the currently assigned character pairings
         help([...curr, remain[0]], remain.slice(1));
 
         help(curr, remain.slice(1));
@@ -204,8 +242,8 @@ findPairingCombos(characters, validPairings, 0)
 // a perfect score would be 15
 validPairings.sort((a, b) => a.score - b.score);
 
-// reduce to top 15 combinations
-validPairings.splice(15);
+// reduce to top 20 combinations
+validPairings.splice(20);
 
 let data = '';
 let lowestRanking = -1;
