@@ -60,14 +60,14 @@ function findPairingCombos(charactersArray, validPairings, currCharacterIndex){
             for(let i = 0; i < currCharPairings.length; ++i){
                 const currRivalName = currCharPairings[i];
 
-                // all characters after Casey will be female
+                // all characters with an index after Casey's will be female
                 // we only want to check female rivals since
                 // all male characters will have already been covered by this point
 
                 // if given rival does not have exactly 1 assigned rival of their own by this point
                 // current pairings combination will be invalid
                 if(charactersArray.findIndex((character) => character.name == currRivalName) > currCharacterIndex &&
-                    getRival(charactersArray, currRivalName).rivals.length == 1){
+                    getRival(charactersArray, currRivalName).rivals.length === 1){
 
                         // deep copy characters array so as to not affect other recursive threads  
                         const charactersArrayCopy = JSON.parse(JSON.stringify(charactersArray));
@@ -83,8 +83,9 @@ function findPairingCombos(charactersArray, validPairings, currCharacterIndex){
                         currRivalCopy.rivals.push(currCharName);
                         currRivalCopy.priority += currRivalCopy.pairings.indexOf(currCharName);
                         
-                        // check condition that there is no symmetry between any combinations of characters
+                        // check condition that there is no symmetry between any subset of characters 
                         // that would cause marrying a specific character to result in any NPC not being able to marry
+                        // due to their alternate rival already marrying someone else
 
                         // check male characters
                         if(!checkForSymmetry(charactersArrayCopy.slice(0, indexOfCasey)))
@@ -180,12 +181,13 @@ function findPairingCombos(charactersArray, validPairings, currCharacterIndex){
                     currCharCopy.priority += j;
                     secondRivalCopy.priority += secondRivalCopy.pairings.indexOf(currCharName);
 
-                    // find all combinations of pairings that include the above pairings
+                    // find all valid combinations of rival assignments for the remaining characters
+                    // given the rival assignments that have already been set for the previously covered characters
                     findPairingCombos(charactersArrayCopy, validPairings, currCharacterIndex + 1);
                 }
             }
 
-            // no need to continue outer loop if first rival is already assigned
+            // no need to continue outer loop if first rival had already been assigned
             if(!firstRivalName)
                 break;
         }
