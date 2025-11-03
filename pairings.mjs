@@ -48,12 +48,12 @@ function findPairingCombos(charactersArray, validPairings, currCharacterIndex){
     const indexOfCasey = Math.ceil(charactersArray.length / 2) - 1;
     
     // exit condition - all male characters have been covered, and algorithm is now on Casey
-    if(currCharacterIndex >= indexOfCasey){
+    if(currCharacterIndex === indexOfCasey){
         const currChar = charactersArray[currCharacterIndex];
         
         // if Casey does not have exactly 1 male rival by this point,
         // current pairings combination will be invalid
-        if(currChar.rivals.length == 1){
+        if(currChar.rivals.length === 1){
             const currCharPairings = currChar.pairings;
 
             // loop through potential rivals in Casey's pairings array
@@ -216,7 +216,7 @@ function checkForSymmetry(charactersArray) {
                 // if the number of unique assigned rivals is equal to the number of
                 // characters being compared, then marrying one of those rivals
                 // will cause one character to be unable to get married
-                if(uniqueRivals.size <= curr.length)
+                if(uniqueRivals.size === curr.length)
                     validCombo = false;
             }
             return;
