@@ -43,6 +43,21 @@ function findPairingCombos(charactersArray, validPairings, currCharacterIndex){
     const getRival = (charPairings, name) => 
         charPairings.find((character) => character.name == name);
 
+    // helper method to add a rival to a given character
+    const updateCharsRivals = (characters, character, rivalName, rivalIndex) => {
+        const charName = character.name;
+        const rival = getRival(characters, rivalName);
+
+        // add current rival to current character's rivals
+        // and vice versa
+        character.rivals.push(rivalName);
+        rival.rivals.push(charName);
+
+        // update pairings ranking for both
+        character.priority += rivalIndex;
+        rival.priority += rival.pairings.indexOf(charName);
+    }
+
     const indexOfCasey = Math.ceil(charactersArray.length / 2) - 1;
     
     // exit condition - all male characters have been covered, and algorithm is now on Casey
@@ -153,31 +168,14 @@ function findPairingCombos(charactersArray, validPairings, currCharacterIndex){
                         continue;
 
                     const currCharCopy = charactersArrayCopy[currCharacterIndex];
-                    const currCharName = currCharCopy.name;
 
                     // if first rival hasn't been assigned yet
                     // set first rival to current first rival from outer loop
                     if(firstRivalName){
-                        currCharCopy.rivals.push(firstRivalName);
-                        const firstRivalCopy = getRival(charactersArrayCopy, firstRivalName);
-
-                        // add current character to current rival's rivals
-                        firstRivalCopy.rivals.push(currCharName);
-
-                        // update pairings ranking for both
-                        currCharCopy.priority += i;
-                        firstRivalCopy.priority += firstRivalCopy.pairings.indexOf(currCharName);
+                        updateCharsRivals(charactersArrayCopy, currCharCopy, firstRivalName, i);
                     }
 
-                    // add current rival to current character's rivals
-                    // and vice versa
-                    currCharCopy.rivals.push(secondRivalName);
-                    const secondRivalCopy = getRival(charactersArrayCopy, secondRivalName);
-                    secondRivalCopy.rivals.push(currCharName);
-
-                    // update pairings ranking for both
-                    currCharCopy.priority += j;
-                    secondRivalCopy.priority += secondRivalCopy.pairings.indexOf(currCharName);
+                    updateCharsRivals(charactersArrayCopy, currCharCopy, secondRivalName, j);
 
                     // find all valid combinations of rival assignments for the remaining characters
                     // given the rival assignments that have already been set for the previously covered characters
