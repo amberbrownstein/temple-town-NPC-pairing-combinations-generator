@@ -32,112 +32,21 @@ Tristan: Casey, Nadia
 Jonah: Nadia, Juniper
 Beau: Calliope, Juniper
 Casey: Tristan, Daisy
-Nadia: Jonah, Tristan
+Nadia: Tristan, Jonah
 Thea: Jay, Flynn
 Daisy: Flynn, Casey
 Calliope: Beau, Jay
 Juniper: Jonah, Beau
 
-Combo 4, Ranking 5: 
-Jay: Thea, Nadia
-Flynn: Daisy, Thea
-Tristan: Casey, Calliope
-Jonah: Nadia, Juniper
-Beau: Calliope, Daisy
-Casey: Tristan, Juniper
-Nadia: Jonah, Jay
-Thea: Jay, Flynn
-Daisy: Flynn, Beau
-Calliope: Beau, Tristan
-Juniper: Jonah, Casey
-
-Combo 5, Ranking 7: 
+Combo 4, Ranking 7: 
 Jay: Thea, Calliope
 Flynn: Daisy, Thea
 Tristan: Nadia, Daisy
 Jonah: Nadia, Juniper
 Beau: Calliope, Casey
 Casey: Beau, Juniper
-Nadia: Jonah, Tristan
+Nadia: Tristan, Jonah
 Thea: Jay, Flynn
 Daisy: Flynn, Tristan
 Calliope: Beau, Jay
-Juniper: Jonah, Casey
-
-Combo 6, Ranking 7: 
-Jay: Thea, Nadia
-Flynn: Daisy, Thea
-Tristan: Casey, Juniper
-Jonah: Nadia, Calliope
-Beau: Calliope, Juniper
-Casey: Tristan, Daisy
-Nadia: Jonah, Jay
-Thea: Jay, Flynn
-Daisy: Flynn, Casey
-Calliope: Beau, Jonah
-Juniper: Tristan, Beau
-
-Combo 7, Ranking 8: 
-Jay: Thea, Nadia
-Flynn: Daisy, Thea
-Tristan: Casey, Daisy
-Jonah: Nadia, Calliope
-Beau: Calliope, Juniper
-Casey: Tristan, Juniper
-Nadia: Jonah, Jay
-Thea: Jay, Flynn
-Daisy: Flynn, Tristan
-Calliope: Beau, Jonah
-Juniper: Beau, Casey
-
-Combo 8, Ranking 9: 
-Jay: Thea, Nadia
-Flynn: Daisy, Thea
-Tristan: Casey, Calliope
-Jonah: Nadia, Juniper
-Beau: Calliope, Juniper
-Casey: Tristan, Daisy
-Nadia: Jonah, Jay
-Thea: Jay, Flynn
-Daisy: Flynn, Casey
-Calliope: Beau, Tristan
-Juniper: Jonah, Beau
-
-Combo 9, Ranking 11: 
-Jay: Thea, Nadia
-Flynn: Daisy, Thea
-Tristan: Juniper, Daisy
-Jonah: Nadia, Calliope
-Beau: Calliope, Casey
-Casey: Beau, Juniper
-Nadia: Jonah, Jay
-Thea: Jay, Flynn
-Daisy: Flynn, Tristan
-Calliope: Beau, Jonah
-Juniper: Tristan, Casey
-
-Combo 10, Ranking 12: 
-Jay: Thea, Nadia
-Flynn: Daisy, Thea
-Tristan: Juniper, Calliope
-Jonah: Nadia, Juniper
-Beau: Calliope, Casey
-Casey: Beau, Daisy
-Nadia: Jonah, Jay
-Thea: Jay, Flynn
-Daisy: Flynn, Casey
-Calliope: Beau, Tristan
-Juniper: Tristan, Jonah
-
-Combo 11, Ranking 13: 
-Jay: Thea, Nadia
-Flynn: Daisy, Thea
-Tristan: Daisy, Calliope
-Jonah: Nadia, Juniper
-Beau: Calliope, Casey
-Casey: Beau, Juniper
-Nadia: Jonah, Jay
-Thea: Jay, Flynn
-Daisy: Flynn, Tristan
-Calliope: Beau, Tristan
 Juniper: Jonah, Casey

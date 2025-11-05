@@ -14,13 +14,13 @@ class Character{
 // initialize all characters, ordering rivals in pairings array
 // by most to least wanted pairing for that character
 const characters = [
-    new Character('Jay', ['Thea', 'Calliope', 'Nadia']),
+    new Character('Jay', ['Thea', 'Calliope']),
     new Character('Flynn', ['Daisy', 'Thea', 'Nadia']),
     new Character('Tristan', ['Casey', 'Juniper', 'Nadia', 'Daisy', 'Calliope']),
     new Character('Jonah', ['Nadia', 'Juniper', 'Calliope', 'Thea']),
     new Character('Beau', ['Calliope', 'Daisy', 'Juniper', 'Nadia', 'Casey']),
     new Character('Casey', ['Juniper', 'Daisy', 'Tristan', 'Beau']),
-    new Character('Nadia', ['Jonah', 'Beau', 'Tristan', 'Jay', 'Flynn']),
+    new Character('Nadia', ['Jonah', 'Beau', 'Tristan', 'Flynn']),
     new Character('Thea', ['Jay', 'Flynn', 'Jonah']),
     new Character('Daisy', ['Flynn', 'Casey', 'Beau', 'Tristan']),
     new Character('Calliope', ['Beau', 'Jay', 'Jonah', 'Tristan']),
@@ -28,14 +28,12 @@ const characters = [
 ]
 
 // add must-have pairings
-characters[0].rivals.push('Thea');
+characters[0].rivals.push('Thea', 'Calliope');
 characters[1].rivals.push('Daisy', 'Thea');
-characters[3].rivals.push('Nadia');
 characters[4].rivals.push('Calliope');
-characters[6].rivals.push('Jonah');
 characters[7].rivals.push('Jay', 'Flynn');
 characters[8].rivals.push('Flynn');
-characters[9].rivals.push('Beau');
+characters[9].rivals.push('Beau', 'Jay');
 
 // determine all valid pairing combinations
 // add rivals to rivals array for each character from copy of charactersArray array
