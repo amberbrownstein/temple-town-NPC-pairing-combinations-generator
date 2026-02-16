@@ -1,59 +1,85 @@
 
 Combo 1, Ranking 1: 
 Jay: Thea, Juniper
-Flynn: Daisy, Thea
+Flynn: Thea, Daisy
 Tristan: Casey, Nadia
-Jonah: Nadia, Calliope
+Jonah: Calliope, Nadia
 Russ: Calliope, Daisy
 Casey: Tristan, Juniper
 Nadia: Tristan, Jonah
-Thea: Flynn, Jay
+Thea: Jay, Flynn
 Daisy: Flynn, Russ
-Calliope: Russ, Jonah
+Calliope: Jonah, Russ
 Juniper: Jay, Casey
 
-Combo 2, Ranking 3: 
+Combo 2, Ranking 5: 
 Jay: Thea, Calliope
-Flynn: Daisy, Thea
-Tristan: Casey, Juniper
-Jonah: Nadia, Juniper
-Russ: Calliope, Nadia
-Casey: Tristan, Daisy
-Nadia: Jonah, Russ
-Thea: Flynn, Jay
-Daisy: Flynn, Casey
-Calliope: Russ, Jay
-Juniper: Tristan, Jonah
-
-Combo 3, Ranking 4: 
-Jay: Thea, Calliope
-Flynn: Daisy, Thea
+Flynn: Thea, Daisy
 Tristan: Casey, Nadia
 Jonah: Nadia, Juniper
 Russ: Calliope, Juniper
 Casey: Tristan, Daisy
 Nadia: Tristan, Jonah
-Thea: Flynn, Jay
+Thea: Jay, Flynn
 Daisy: Flynn, Casey
-Calliope: Russ, Jay
+Calliope: Jay, Russ
 Juniper: Jonah, Russ
 
-Combo 4, Ranking 4: 
+Combo 3, Ranking 5: 
+Jay: Thea, Juniper
+Flynn: Thea, Daisy
+Tristan: Casey, Nadia
+Jonah: Calliope, Nadia
+Russ: Calliope, Juniper
+Casey: Tristan, Daisy
+Nadia: Tristan, Jonah
+Thea: Jay, Flynn
+Daisy: Flynn, Casey
+Calliope: Jonah, Russ
+Juniper: Jay, Russ
+
+Combo 4, Ranking 6: 
 Jay: Thea, Calliope
-Flynn: Daisy, Thea
-Tristan: Casey, Daisy
+Flynn: Thea, Daisy
+Tristan: Casey, Nadia
+Jonah: Calliope, Nadia
+Russ: Daisy, Juniper
+Casey: Tristan, Juniper
+Nadia: Tristan, Jonah
+Thea: Jay, Flynn
+Daisy: Flynn, Russ
+Calliope: Jay, Jonah
+Juniper: Russ, Casey
+
+Combo 5, Ranking 6: 
+Jay: Thea, Calliope
+Flynn: Thea, Daisy
+Tristan: Casey, Juniper
 Jonah: Nadia, Juniper
 Russ: Calliope, Nadia
-Casey: Tristan, Juniper
+Casey: Tristan, Daisy
 Nadia: Jonah, Russ
-Thea: Flynn, Jay
-Daisy: Flynn, Tristan
-Calliope: Russ, Jay
-Juniper: Jonah, Casey
+Thea: Jay, Flynn
+Daisy: Flynn, Casey
+Calliope: Jay, Russ
+Juniper: Tristan, Jonah
 
-Combo 5, Ranking 5: 
+Combo 6, Ranking 6: 
+Jay: Thea, Juniper
+Flynn: Thea, Daisy
+Tristan: Casey, Nadia
+Jonah: Calliope, Juniper
+Russ: Calliope, Nadia
+Casey: Tristan, Daisy
+Nadia: Tristan, Russ
+Thea: Jay, Flynn
+Daisy: Flynn, Casey
+Calliope: Jonah, Russ
+Juniper: Jay, Jonah
+
+Combo 7, Ranking 6: 
 Jay: Calliope, Juniper
-Flynn: Daisy, Thea
+Flynn: Thea, Daisy
 Tristan: Casey, Nadia
 Jonah: Nadia, Juniper
 Russ: Calliope, Thea
@@ -61,12 +87,90 @@ Casey: Tristan, Daisy
 Nadia: Tristan, Jonah
 Thea: Flynn, Russ
 Daisy: Flynn, Casey
-Calliope: Russ, Jay
+Calliope: Jay, Russ
 Juniper: Jay, Jonah
 
-Combo 6, Ranking 6: 
+Combo 8, Ranking 7: 
+Jay: Thea, Calliope
+Flynn: Thea, Daisy
+Tristan: Casey, Nadia
+Jonah: Calliope, Juniper
+Russ: Daisy, Nadia
+Casey: Tristan, Juniper
+Nadia: Tristan, Russ
+Thea: Jay, Flynn
+Daisy: Flynn, Russ
+Calliope: Jay, Jonah
+Juniper: Jonah, Casey
+
+Combo 9, Ranking 7: 
+Jay: Thea, Calliope
+Flynn: Thea, Nadia
+Tristan: Casey, Juniper
+Jonah: Nadia, Juniper
+Russ: Calliope, Daisy
+Casey: Tristan, Daisy
+Nadia: Flynn, Jonah
+Thea: Jay, Flynn
+Daisy: Russ, Casey
+Calliope: Jay, Russ
+Juniper: Tristan, Jonah
+
+Combo 10, Ranking 7: 
+Jay: Thea, Juniper
+Flynn: Thea, Nadia
+Tristan: Casey, Nadia
+Jonah: Calliope, Juniper
+Russ: Calliope, Daisy
+Casey: Tristan, Daisy
+Nadia: Flynn, Tristan
+Thea: Jay, Flynn
+Daisy: Russ, Casey
+Calliope: Jonah, Russ
+Juniper: Jay, Jonah
+
+Combo 11, Ranking 7: 
+Jay: Thea, Juniper
+Flynn: Thea, Nadia
+Tristan: Casey, Juniper
+Jonah: Calliope, Nadia
+Russ: Calliope, Daisy
+Casey: Tristan, Daisy
+Nadia: Flynn, Jonah
+Thea: Jay, Flynn
+Daisy: Russ, Casey
+Calliope: Jonah, Russ
+Juniper: Jay, Tristan
+
+Combo 12, Ranking 8: 
+Jay: Thea, Calliope
+Flynn: Thea, Daisy
+Tristan: Casey, Daisy
+Jonah: Nadia, Juniper
+Russ: Calliope, Nadia
+Casey: Tristan, Juniper
+Nadia: Jonah, Russ
+Thea: Jay, Flynn
+Daisy: Flynn, Tristan
+Calliope: Jay, Russ
+Juniper: Jonah, Casey
+
+Combo 13, Ranking 8: 
+Jay: Thea, Juniper
+Flynn: Thea, Daisy
+Tristan: Nadia, Juniper
+Jonah: Calliope, Nadia
+Russ: Calliope, Casey
+Casey: Russ, Daisy
+Nadia: Tristan, Jonah
+Thea: Jay, Flynn
+Daisy: Flynn, Casey
+Calliope: Jonah, Russ
+Juniper: Jay, Tristan
+
+Combo 14, Ranking 8: 
 Jay: Calliope, Juniper
-Flynn: Daisy, Thea
+Flynn: Thea, Daisy
 Tristan: Casey, Nadia
 Jonah: Nadia, Thea
 Russ: Calliope, Daisy
@@ -74,148 +178,83 @@ Casey: Tristan, Juniper
 Nadia: Tristan, Jonah
 Thea: Flynn, Jonah
 Daisy: Flynn, Russ
-Calliope: Russ, Jay
+Calliope: Jay, Russ
 Juniper: Jay, Casey
 
-Combo 7, Ranking 7: 
+Combo 15, Ranking 9: 
 Jay: Thea, Calliope
-Flynn: Daisy, Thea
-Tristan: Nadia, Daisy
-Jonah: Nadia, Juniper
-Russ: Calliope, Casey
+Flynn: Thea, Daisy
+Tristan: Nadia, Juniper
+Jonah: Calliope, Nadia
+Russ: Daisy, Casey
 Casey: Russ, Juniper
 Nadia: Tristan, Jonah
-Thea: Flynn, Jay
-Daisy: Flynn, Tristan
-Calliope: Russ, Jay
+Thea: Jay, Flynn
+Daisy: Flynn, Russ
+Calliope: Jay, Jonah
+Juniper: Tristan, Casey
+
+Combo 16, Ranking 9: 
+Jay: Thea, Calliope
+Flynn: Thea, Nadia
+Tristan: Casey, Daisy
+Jonah: Nadia, Juniper
+Russ: Calliope, Daisy
+Casey: Tristan, Juniper
+Nadia: Flynn, Jonah
+Thea: Jay, Flynn
+Daisy: Tristan, Russ
+Calliope: Jay, Russ
 Juniper: Jonah, Casey
 
-Combo 8, Ranking 7: 
+Combo 17, Ranking 9: 
 Jay: Thea, Juniper
-Flynn: Daisy, Thea
-Tristan: Casey, Nadia
-Jonah: Nadia, Calliope
-Russ: Calliope, Juniper
-Casey: Tristan, Daisy
-Nadia: Tristan, Jonah
-Thea: Flynn, Jay
-Daisy: Flynn, Casey
-Calliope: Russ, Jonah
-Juniper: Jay, Russ
+Flynn: Thea, Nadia
+Tristan: Casey, Daisy
+Jonah: Calliope, Nadia
+Russ: Calliope, Daisy
+Casey: Tristan, Juniper
+Nadia: Flynn, Jonah
+Thea: Jay, Flynn
+Daisy: Tristan, Russ
+Calliope: Jonah, Russ
+Juniper: Jay, Casey
 
-Combo 9, Ranking 8: 
+Combo 18, Ranking 9: 
 Jay: Thea, Juniper
-Flynn: Daisy, Thea
-Tristan: Casey, Nadia
-Jonah: Juniper, Calliope
-Russ: Calliope, Nadia
+Flynn: Daisy, Nadia
+Tristan: Casey, Juniper
+Jonah: Calliope, Nadia
+Russ: Calliope, Thea
 Casey: Tristan, Daisy
-Nadia: Tristan, Russ
-Thea: Flynn, Jay
+Nadia: Flynn, Jonah
+Thea: Jay, Russ
 Daisy: Flynn, Casey
-Calliope: Russ, Jonah
-Juniper: Jay, Jonah
-
-Combo 10, Ranking 9: 
-Jay: Thea, Juniper
-Flynn: Daisy, Thea
-Tristan: Casey, Calliope
-Jonah: Nadia, Juniper
-Russ: Calliope, Nadia
-Casey: Tristan, Daisy
-Nadia: Jonah, Russ
-Thea: Flynn, Jay
-Daisy: Flynn, Casey
-Calliope: Russ, Tristan
-Juniper: Jay, Jonah
-
-Combo 11, Ranking 9: 
-Jay: Thea, Juniper
-Flynn: Daisy, Thea
-Tristan: Juniper, Nadia
-Jonah: Nadia, Calliope
-Russ: Calliope, Casey
-Casey: Russ, Daisy
-Nadia: Tristan, Jonah
-Thea: Flynn, Jay
-Daisy: Flynn, Casey
-Calliope: Russ, Jonah
+Calliope: Jonah, Russ
 Juniper: Jay, Tristan
 
-Combo 12, Ranking 10: 
-Jay: Thea, Juniper
-Flynn: Daisy, Thea
+Combo 19, Ranking 10: 
+Jay: Thea, Calliope
+Flynn: Thea, Daisy
 Tristan: Nadia, Daisy
-Jonah: Nadia, Calliope
+Jonah: Nadia, Juniper
 Russ: Calliope, Casey
 Casey: Russ, Juniper
 Nadia: Tristan, Jonah
-Thea: Flynn, Jay
+Thea: Jay, Flynn
 Daisy: Flynn, Tristan
-Calliope: Russ, Jonah
-Juniper: Jay, Casey
+Calliope: Jay, Russ
+Juniper: Jonah, Casey
 
-Combo 13, Ranking 11: 
-Jay: Calliope, Juniper
-Flynn: Daisy, Thea
-Tristan: Casey, Juniper
-Jonah: Nadia, Thea
-Russ: Calliope, Nadia
-Casey: Tristan, Daisy
-Nadia: Jonah, Russ
-Thea: Flynn, Jonah
-Daisy: Flynn, Casey
-Calliope: Russ, Jay
-Juniper: Jay, Tristan
-
-Combo 14, Ranking 12: 
-Jay: Thea, Juniper
-Flynn: Daisy, Thea
-Tristan: Nadia, Calliope
-Jonah: Nadia, Juniper
-Russ: Calliope, Casey
-Casey: Russ, Daisy
-Nadia: Tristan, Jonah
-Thea: Flynn, Jay
-Daisy: Flynn, Casey
-Calliope: Russ, Tristan
-Juniper: Jay, Jonah
-
-Combo 15, Ranking 12: 
-Jay: Calliope, Juniper
-Flynn: Daisy, Thea
-Tristan: Casey, Daisy
-Jonah: Nadia, Thea
-Russ: Calliope, Nadia
-Casey: Tristan, Juniper
-Nadia: Jonah, Russ
-Thea: Flynn, Jonah
-Daisy: Flynn, Tristan
-Calliope: Russ, Jay
-Juniper: Jay, Casey
-
-Combo 16, Ranking 13: 
-Jay: Calliope, Juniper
-Flynn: Daisy, Thea
+Combo 20, Ranking 10: 
+Jay: Thea, Calliope
+Flynn: Daisy, Nadia
 Tristan: Casey, Nadia
-Jonah: Juniper, Thea
-Russ: Calliope, Nadia
-Casey: Tristan, Daisy
-Nadia: Tristan, Russ
-Thea: Flynn, Jonah
-Daisy: Flynn, Casey
-Calliope: Russ, Jay
-Juniper: Jay, Jonah
-
-Combo 17, Ranking 14: 
-Jay: Calliope, Juniper
-Flynn: Daisy, Thea
-Tristan: Juniper, Nadia
-Jonah: Nadia, Thea
-Russ: Calliope, Casey
-Casey: Russ, Daisy
-Nadia: Tristan, Jonah
-Thea: Flynn, Jonah
-Daisy: Flynn, Casey
-Calliope: Russ, Jay
-Juniper: Jay, Tristan
+Jonah: Calliope, Juniper
+Russ: Daisy, Thea
+Casey: Tristan, Juniper
+Nadia: Flynn, Tristan
+Thea: Jay, Russ
+Daisy: Flynn, Russ
+Calliope: Jay, Jonah
+Juniper: Jonah, Casey
